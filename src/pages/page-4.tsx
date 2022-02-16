@@ -6,15 +6,25 @@ import Cloud3 from "../assets/images/page 4/cloud-3.png";
 import gsap from "gsap";
 
 export const Page4: React.FC = () => {
-
-    useEffect(()=>{
-        const animations = ()=>{
-            const tl = gsap.timeline();
-            tl.fromTo('.clouds-group .cloud', {rotate:'10deg', duration:2}, {rotate:'0deg', yoyo:true, repeat:-1, duration:2 },0);
-            tl.fromTo('.clouds-group', {x:'80vw', duration:30}, {x:'-100vw', repeat:-1,  duration:30 },0);
-        }
-        animations();
-    },[])
+    
+	useEffect(() => {
+		const animations = () => {
+			const tl = gsap.timeline();
+			tl.fromTo(
+				".clouds-group .cloud",
+				{ rotate: "10deg", duration: 2 },
+				{ rotate: "0deg", yoyo: true, repeat: -1, duration: 2 },
+				0
+			);
+			tl.fromTo(
+				".clouds-group",
+				{ x: "80vw", duration: 30 },
+				{ x: "-100vw", repeat: -1, duration: 30 },
+				0
+			);
+		};
+		animations();
+	}, []);
 
 	return (
 		<div className="static-background relative" style={{ backgroundImage: `url(${Static})` }}>
@@ -29,7 +39,7 @@ export const Page4: React.FC = () => {
 				}}
 			></div>
 
-			<div className="clouds-group absolute" style={{top:'15vh',left:'10vw'}}>
+			<div className="clouds-group absolute" style={{ top: "15vh", left: "10vw" }}>
 				<div
 					className="cloud"
 					style={{
