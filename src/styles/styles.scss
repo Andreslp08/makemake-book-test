@@ -7,8 +7,8 @@
     box-sizing: border-box;
 }
 
-body{
-   
+body {
+    overflow-x: hidden;
 }
 
 .main {
@@ -27,15 +27,79 @@ body{
     @apply flex flex-wrap  justify-between flex-col-reverse items-center;
 }
 
+.static-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cloud {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @apply m-2;
+}
+
+.clouds-group {
+    @apply flex flex-row;
+}
+
 .button {
     z-index: 0;
+    transition: transform .3s;
     @apply relative w-fit h-fit m-1 py-1 px-5 overflow-visible;
-    .shape{
+    .shape {
         width: 100%;
         height: 100%;
         z-index: -1;
-        transform: rotate(0deg);
         @apply absolute top-0 left-0;
+    }
+    &:hover{
+        transform: scale(1.1);
     }
 }
 
+.pages-menu {
+    height: 100px;
+    z-index: 9999;
+    background-size: cover;
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    transform: translateY(-100%);
+    transition: transform .3s;
+    @apply fixed top-0 left-0 w-full;
+    &.visible{
+        transform: translateY(0%);
+    }
+    .container {
+        @apply relative flex flex-wrap items-center w-full h-full;
+
+        .logo{
+            width: 200px;
+        }
+
+        .menu-button {
+            bottom: -50px;
+            left: 0;
+            @apply absolute m-2;
+        }
+        .pages-container{
+            max-width: 400px;
+            @apply flex flex-grow flex-row overflow-hidden;        
+            
+            .page{
+                width: 150px;
+                height: auto;
+                border: dashed 1px rgb(252, 185, 0);
+                transition: box-shadow .3s, transform .3s;
+                @apply m-1 cursor-pointer;
+                &:hover{
+                    box-shadow: 0 0 10px 0px rgba(0,0,0,.25);
+                    transform: scale(1.01);
+                }
+            }
+        }
+    }
+}
