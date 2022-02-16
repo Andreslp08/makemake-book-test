@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Container1 from '../assets/images/ui/container-1.png'
 import Container2 from '../assets/images/ui/container-2.png'
@@ -11,7 +11,7 @@ export const HomePage: React.FC = () => {
 	return (
 		<section className="home-page">
 			<div className="flex flex-row my-4 w-full justify-around items-center">
-				<button className="button" onClick={()=>navigate('/pi/pages/4')}>
+				<button className="button" onClick={()=>navigate('/pi/page/4')}>
                     <img src={Container1} alt="container-1-shape" className="shape" />
                     Leer
                     </button>
