@@ -22,7 +22,7 @@ export const Page4: React.FC = () => {
 			);
 			tl.fromTo(
 				".clouds-group",
-				{ x: "80vw", duration: 20 },
+				{ x: "200%", duration: 20 },
 				{ x: "-125%", repeat: -1, duration: 20 },
 				0
 			);
@@ -40,36 +40,36 @@ export const Page4: React.FC = () => {
 				<div
 					className="cloud absolute"
 					style={{
-						top: "35vh",
-						left: "10vw",
-						width: "70px",
-						height: "70px",
+						top: "35%",
+						left: "10%",
+						width: "200px",
+						height: "200px",
 						backgroundImage: `url(${Cloud3})`,
 					}}
 				></div>
 
-				<div className="clouds-group absolute" style={{ top: "15vh", left: "10vw" }}>
+				<div className="clouds-group absolute" style={{ top: "15%", left: "10%" }}>
 					<div
 						className="cloud"
 						style={{
-							width: "100px",
-							height: "100px",
+							width: "250px",
+							height: "250px",
 							backgroundImage: `url(${Cloud2})`,
 						}}
 					></div>
 					<div
 						className="cloud"
 						style={{
-							width: "100px",
-							height: "100px",
+							width: "250px",
+							height: "250px",
 							backgroundImage: `url(${Cloud1})`,
 						}}
 					></div>
 					<div
 						className="cloud"
 						style={{
-							width: "100px",
-							height: "100px",
+							width: "250px",
+							height: "250px",
 							backgroundImage: `url(${Cloud3})`,
 						}}
 					></div>

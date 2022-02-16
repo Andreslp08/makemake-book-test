@@ -8,13 +8,16 @@
 }
 
 body {
-    overflow-x: hidden;
+
 }
 
 .main {
-    width: 100vw;
-    height: 100vh;
-    @apply flex flex-wrap;
+    width: 1920px;
+    height: 1080px;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    @apply absolute flex flex-wrap;
 }
 
 .home-page {
@@ -62,7 +65,7 @@ body {
 }
 
 .pages-menu {
-    height: 100px;
+    height: 30%;
     z-index: 9999;
     background-size: cover;
     background-position: center 100%;
@@ -77,26 +80,27 @@ body {
         @apply relative flex flex-wrap items-center w-full h-full;
 
         .logo{
-            width: 200px;
+            width: 30%;
         }
 
         .menu-button {
-            bottom: -50px;
-            left: 0;
-            @apply absolute m-2;
+            bottom: -125px;
+            left: 10px;
+            @apply absolute m-6;
         }
         .pages-container{
-            max-width: 400px;
-            @apply flex flex-grow flex-row overflow-hidden;        
+            max-width: 61%;
+            height: 100%;
+            @apply flex flex-grow flex-row justify-center overflow-hidden;        
             
             .page{
-                width: 150px;
-                height: auto;
-                border: dashed 1px rgb(252, 185, 0);
+                width: 30%;
+                height: 90%;
+                border: dashed 5px rgb(252, 185, 0);
                 transition: box-shadow .3s, transform .3s;
-                @apply m-1 cursor-pointer;
+                @apply m-2 cursor-pointer;
                 &:hover{
-                    box-shadow: 0 0 10px 0px rgba(0,0,0,.25);
+                    box-shadow: 0 0 20px 0px rgba(0,0,0,.25);
                     transform: scale(1.01);
                 }
             }

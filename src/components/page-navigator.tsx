@@ -12,14 +12,14 @@ export const PageNavigator: React.FC<PageNavigatorProps> = ({ leftClick, rightCl
 		<div className="fixed w-full left-0 bottom-0 flex items-center justify-between">
 			<button
 				className="button p-0 m-2"
-				style={{ width: 28, height: 28 }}
+				style={{ width: '90px', height: '90px' }}
 				onClick={() => leftClick && leftClick()}
 			>
 				<img src={Left} alt="left-button" className="shape" />
 			</button>
 			<button
 				className="button p-0 m-2"
-				style={{ width: 28, height: 28 }}
+				style={{ width: '90px', height: '90px' }}
 				onClick={() => rightClick && rightClick()}
 			>
 				<img src={Right} alt="right-button" className="shape" />

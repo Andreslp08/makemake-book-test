@@ -14,11 +14,11 @@ export const Page5: React.FC = () => {
 			const tl = gsap.timeline();
 			tl.fromTo(
 				".page-5 p",
-				{ x: "73vw", y: "28vh", duration: 10 },
-				{ x: "78vw", y: "24vh", duration: 10 },
+				{ x: "1400px", y: "300px", duration: 2 },
+				{ x: "1500px", y: "250px", duration: 2 },
 				0
 			);
-			tl.fromTo(".page-5 p", { opacity: 0 }, { opacity: 1, duration: 2 }, 0);
+			tl.fromTo(".page-5 p", { opacity: 0 }, { opacity: 1, duration: 3 }, 0);
 		};
 		animations();
 	}, []);
@@ -32,7 +32,7 @@ export const Page5: React.FC = () => {
 			>
 				<p
 					className="bg-contain bg-center bg-no-repeat absolute"
-					style={{ backgroundImage: `url(${Text})`, width: 30, height: 30 }}
+					style={{ backgroundImage: `url(${Text})`, width: "90px", height:  "100px" }}
 				></p>
 			</div>
 			<PageNavigator

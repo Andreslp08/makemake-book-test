@@ -12,7 +12,7 @@ import Page6 from "../assets/images/page 6/static.png";
 import { useNavigate } from "react-router-dom";
 
 export const PagesMenu: React.FC = () => {
-	const [visible, setVisible] = useState(true);
+	const [visible, setVisible] = useState(false);
     const navigate = useNavigate();
 	return (
 		<div
@@ -22,7 +22,7 @@ export const PagesMenu: React.FC = () => {
 			<div className="container">
 				<button
 					className="button menu-button p-0 m-2"
-					style={{ width: 30, height: 30 }}
+					style={{ width: '100px', height: '100px' }}
 					onClick={() => setVisible(!visible)}
 				>
 					<img
@@ -33,7 +33,7 @@ export const PagesMenu: React.FC = () => {
 				</button>
 				<img src={MenuLogo} alt="menu-logo" className="logo" />
 
-				<button className="button p-0 m-2" style={{ width: 20, height: 20 }}>
+				<button className="button p-0 m-2" style={{ width: '60px', height: '60px' }}>
 					<img src={Left} alt="left-button" className="shape" />
 				</button>
 				<div className="pages-container">
@@ -41,7 +41,7 @@ export const PagesMenu: React.FC = () => {
                     <img src={Page5} alt="page-5" className="page" onClick={()=>navigate('/pi/page/5')}/>
                     <img src={Page6} alt="page-6" className="page" onClick={()=>navigate('/pi/page/6')}/>
                 </div>
-				<button className="button p-0 m-2" style={{ width: 20, height: 20 }}>
+				<button className="button p-0 m-2" style={{ width: '60px', height: '60px' }}>
 					<img src={Right} alt="right-button" className="shape" />
 				</button>
 			</div>

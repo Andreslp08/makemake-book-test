@@ -11,17 +11,17 @@ export const HomePage: React.FC = () => {
 	return (
 		<section className="home-page">
 			<div className="flex flex-row my-4 w-full justify-around items-center">
-				<button className="button" onClick={()=>navigate('/pi/page/4')}>
+				<button className="button" style={{fontSize:'60px'}} onClick={()=>navigate('/pi/page/4')}>
                     <img src={Container1} alt="container-1-shape" className="shape" />
                     Leer
                     </button>
-				<button className="button" onClick={()=>alert('Aquí va algo...')}>
+				<button className="button" onClick={()=>alert('Aquí va algo...')} style={{fontSize:'40px'}}>
                     <img src={Container3} alt="container-1-shape" className="shape" />
-                    <p className="mt-4 my-1 text-sm">
+                    <p className="mt-4 my-1 p-5">
                     Para quienes les gusta <br/> leer sin saber hacerlo
                     </p>
                     </button>
-				<button className="button" onClick={()=>alert('Aquí se muestran los creditos.')}>
+				<button className="button" onClick={()=>alert('Aquí se muestran los creditos.')} style={{fontSize:'60px'}}>
                     <img src={Container2} alt="container-1-shape" className="shape" />
                     Créditos
                     </button>
