@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { initFirebaseApp } from "./firebase";
 import { HomePage } from "./pages/home-page";
 import { Page4 } from "./pages/page-4";
 import { Page5 } from "./pages/page-5";
 import { Page6 } from "./pages/page-6";
 import "./styles/styles.scss";
 
+initFirebaseApp();
 
 function App() {
 
@@ -23,7 +25,7 @@ function App() {
     window.onresize = ()=>{
       scale();
     }
-    
+
     scale();
   },[])
 
