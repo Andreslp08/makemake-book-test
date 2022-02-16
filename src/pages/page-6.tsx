@@ -3,8 +3,13 @@ import Static from "../assets/images/page 6/static.png";
 import Text from "../assets/images/page 6/text-1.png";
 import Eggs from "../assets/images/page 6/eggs.png";
 import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
+import { PageNavigator } from "../components/page-navigator";
+import { PagesMenu } from "../components/pages-menu";
 
 export const Page6: React.FC = () => {
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		const animations = () => {
 			const tl = gsap.timeline();
@@ -31,19 +36,26 @@ export const Page6: React.FC = () => {
 	}, []);
 
 	return (
-		<div
-			className="page-6 static-background relative"
-			style={{ backgroundImage: `url(${Static})` }}
-		>
-			<p
-				className="bg-contain bg-center bg-no-repeat absolute"
-				style={{ backgroundImage: `url(${Text})`, width: 70, height: 70 }}
-			></p>
-
+		<>
+			<PagesMenu />
 			<div
-				className="bg-contain bg-center bg-no-repeat absolute"
-				style={{ backgroundImage: `url(${Eggs})`, width: 150, height: 150 }}
-			></div>
-		</div>
+				className="page-6 static-background relative"
+				style={{ backgroundImage: `url(${Static})` }}
+			>
+				<p
+					className="bg-contain bg-center bg-no-repeat absolute"
+					style={{ backgroundImage: `url(${Text})`, width: 70, height: 70 }}
+				></p>
+
+				<div
+					className="bg-contain bg-center bg-no-repeat absolute"
+					style={{ backgroundImage: `url(${Eggs})`, width: 150, height: 150 }}
+				></div>
+			</div>
+			<PageNavigator
+				leftClick={() => navigate("/pi/page/5")}
+				rightClick={() => navigate("/pi/home")}
+			/>
+		</>
 	);
 };

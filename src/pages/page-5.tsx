@@ -2,9 +2,13 @@ import React, { useEffect } from "react";
 import Static from "../assets/images/page 5/static.png";
 import Text from "../assets/images/page 5/text-1.png";
 import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
+import { PageNavigator } from "../components/page-navigator";
+import { PagesMenu } from "../components/pages-menu";
 
 export const Page5: React.FC = () => {
-	
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		const animations = () => {
 			const tl = gsap.timeline();
@@ -20,14 +24,21 @@ export const Page5: React.FC = () => {
 	}, []);
 
 	return (
-		<div
-			className="page-5 static-background relative"
-			style={{ backgroundImage: `url(${Static})` }}
-		>
-			<p
-				className="bg-contain bg-center bg-no-repeat absolute"
-				style={{ backgroundImage: `url(${Text})`, width: 30, height: 30 }}
-			></p>
-		</div>
+		<>
+		<PagesMenu/>
+			<div
+				className="page-5 static-background relative"
+				style={{ backgroundImage: `url(${Static})` }}
+			>
+				<p
+					className="bg-contain bg-center bg-no-repeat absolute"
+					style={{ backgroundImage: `url(${Text})`, width: 30, height: 30 }}
+				></p>
+			</div>
+			<PageNavigator
+				leftClick={() => navigate("/pi/page/4")}
+				rightClick={() => navigate("/pi/page/6")}
+			/>
+		</>
 	);
 };
