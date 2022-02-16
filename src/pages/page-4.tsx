@@ -18,8 +18,8 @@ export const Page4: React.FC = () => {
 			);
 			tl.fromTo(
 				".clouds-group",
-				{ x: "80vw", duration: 30 },
-				{ x: "-100vw", repeat: -1, duration: 30 },
+				{ x: "80vw", duration: 20 },
+				{ x: "-125%", repeat: -1, duration: 20 },
 				0
 			);
 		};
