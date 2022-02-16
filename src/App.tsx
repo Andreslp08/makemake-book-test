@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/home-page";
 import { Page4 } from "./pages/page-4";
 import { Page5 } from "./pages/page-5";
 import { Page6 } from "./pages/page-6";
 import "./styles/styles.scss";
+
+
 function App() {
+
+
+  useEffect(()=>{
+    const scale = ()=>{
+      const main = document.querySelector('.main') as HTMLElement;
+      const scaleValue = Math.min(
+        window.innerWidth/main.clientWidth,
+        window.innerHeight/main.clientHeight
+      );
+      main.style.transform = `translate(-50%, -50%) scale(${scaleValue})`
+    }  
+
+    window.onresize = ()=>{
+      scale();
+    }
+    
+    scale();
+  },[])
 
 	return (
 		<BrowserRouter>
