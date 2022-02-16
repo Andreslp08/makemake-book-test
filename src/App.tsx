@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/home-page";
+import { Page4 } from "./pages/page-4";
+import { Page5 } from "./pages/page-5";
+import { Page6 } from "./pages/page-6";
+import "./styles/styles.scss";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	return (
+		<BrowserRouter>
+			<main className="main">
+				<Routes>
+          <Route path="/pi/home" element={<HomePage/>}/>
+          <Route path="/" element={<Navigate to={'/pi/home'}/>}/>
+          <Route path="/pi/page/4" element={<Page4/>}/>
+          <Route path="/pi/page/5" element={<Page5/>}/>
+          <Route path="/pi/page/6" element={<Page6/>}/>
+        </Routes>
+			</main>
+		</BrowserRouter>
+	);
 }
 
 export default App;
