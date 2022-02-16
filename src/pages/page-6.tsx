@@ -33,6 +33,7 @@ export const Page6: React.FC = () => {
 			);
 		};
 		animations();
+		document.title = 'PI - Página 6';
 	}, []);
 
 	return (

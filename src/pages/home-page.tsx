@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Container1 from '../assets/images/ui/container-1.png'
 import Container2 from '../assets/images/ui/container-2.png'
@@ -7,6 +7,10 @@ import Container3 from '../assets/images/ui/container-3.png'
 export const HomePage: React.FC = () => {
 
     const navigate = useNavigate();
+
+    useEffect(()=>{
+     document.title = 'PI - Home';
+    },[])
 
 	return (
 		<section className="home-page">

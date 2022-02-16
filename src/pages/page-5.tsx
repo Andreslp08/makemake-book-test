@@ -21,6 +21,8 @@ export const Page5: React.FC = () => {
 			tl.fromTo(".page-5 p", { opacity: 0 }, { opacity: 1, duration: 3 }, 0);
 		};
 		animations();
+		document.title = 'PI - Página 5';
+
 	}, []);
 
 	return (

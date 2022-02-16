@@ -28,6 +28,7 @@ export const Page4: React.FC = () => {
 			);
 		};
 		animations();
+		document.title = 'PI - Página 4';
 	}, []);
 
 	return (
